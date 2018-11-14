@@ -1,4 +1,5 @@
 module.exports = {
+  root: true,
   env: {
     node: true,
     browser: true,
@@ -12,11 +13,11 @@ module.exports = {
     "html"
   ],
   globals: {
-    _: false
+    _: false // lodash
   },
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
   },
   parserOptions: {
     parser: 'babel-eslint'
